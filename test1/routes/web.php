@@ -91,3 +91,7 @@ EOF;
 
 Route::get('hello', 'HelloController@index');
 Route::get('hello/other', 'HelloController@other');
+
+Route::get('hello0709/{name}/{year}', function($name,$year){
+    return view('greeting', ['name'=> $name, 'year'=> $year]);
+});
